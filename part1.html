@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<title>First Assignment</title>
+<body>
+   <h1>Please Enter Your Details For Our Dating Website!</h1>
+   <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+     <!-- Start of first section -->
+     <fieldset>
+       <legend>Your Face:</legend>
+       <label for="image">Your Image</label>
+       <input type="file" name="avatar" id="avatar" required /><br/>
+       <label for="img_prv">Image preview</label>
+       <img id="preview" />
+     </fieldset>
+     <!-- End of first section -->
+     <!-- Start of second section -->
+     <fieldset>
+       <legend>Your General Details</legend>
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Your full name" required /><br />
+        <label for="gender">Gender:</label>
+        <input type="radio" value="Male" name="gender" required />Male
+        <input type="radio" value="Female" name="gender" required />Female<br/>
+        <label for="age">Age:</label>
+        <input type="number" name="age" required /><br/>
+        <label for="dob">Date of birth:</label>
+        <input type="date" name="date" /><br />
+        <label for="favorite_color">Favorite color:</label>
+        <input type="color" name="color" /><br />
+        <label for="country">Which country:</label>
+        <select name="country">
+          <option>Choose a country</option>
+          <option value="United States">United States</option>
+          <option value="Canada">Canada</option>
+          <option value="Cameroon">Cameroon</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Russia">Russia</option>
+        </select>
+     </fieldset>
+     <!-- End of second section -->
+     <!-- Start of third section -->
+     <fieldset>
+       <legend>Your indicators</legend>
+        <label for="height">Height:</label>
+        Short<input name="height" type="range" min="0" max="100" step="5" />Tall<br/>
+        <label for="salary">Salary:</label>
+        Poor<input name="salary" type="range" min="0" max="100" step="5" />Rich
+     </fieldset>
+     <!-- End of third section -->
+     <!-- Start of fourth section -->
+     <fieldset>
+       <legend>Your Contact Information</legend>
+        <label for="email">Email:</label>
+        <input name="email" type="email" required /><br/>
+        <label for="mobile">Mobile:</label>
+        <input name="mobile" type="tel" /><br/>
+        <label for="address">Address:</label>
+        <textarea name="address"></textarea><br/>
+        <label>Method to contact you:</label>
+        <input type="checkbox" name="fst_choice" /> Email
+        <input type="checkbox" name="scd_choice" /> Whatsapp
+        <input type="checkbox" name="thrd_choice"/> In-app chat
+     </fieldset>
+     <!-- End of fourth section -->
+     <input type="submit" value="Submit" />
+   </form>
+</body>
+</html>
