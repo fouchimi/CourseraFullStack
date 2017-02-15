@@ -1,0 +1,49 @@
+  <html>
+  <head>
+    <title>Part 1 Week 2</title>
+    <script type="text/javascript" >
+      var target_color;
+      var target_index;
+      var guess_input_text;
+      var finished = false;
+      var guesses = 0;
+      var showOnce = true;
+      var colors =["blue", "cyan", "gold", "green", "magenta",
+                   "orange", "red", "white", "yellow"];
+      var bodyTag;
+
+      function do_game(){
+        var random_number = Math.random() * 9;
+        var random_number_integer = Math.floor(random_number);
+        target = random_number_integer;
+        if(showOnce){
+          target_color = colors[target];
+          alert("I am thinking of this color: " + target_color);
+          target_index = colors.indexOf(target_color);
+          showOnce = false;
+        }
+        var colorString="";
+
+        for(var i=0; i < colors.length; i++){
+          colorString += colors[i] + ", ";
+        }
+
+        while(!finished){
+          guess_input_text = prompt("I am thinking of one of these colors: " +
+                                    colorString + "\n\n" +
+                                    "What color am I thinking of?");
+          guess_input_text = guess_input_text.trim().toLowerCase();
+          guesses += 1;
+          if(target_color == guess_input_text) {
+            bodyTag = document.getElementsByTagName("body")[0];
+            bodyTag.style.background=target_color;
+            finished = true;
+        }
+
+      }
+    }
+    </script>
+  </head>
+  <body onload="do_game()">
+  </body>
+  </html>
