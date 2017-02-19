@@ -33,7 +33,7 @@
                     <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
                     <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Menu <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Appetizers</a></li>
                             <li><a href="#">Main Courses</a></li>
@@ -45,7 +45,7 @@
                             <li><a href="#">Weekend menu</a></li>
                         </ul>
                     </li>    
-                    <li><a href="contactus.html">Contact</a></li>
+                    <li><a href="contactus.html"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
@@ -80,11 +80,7 @@
         </div>
         <div class="col-xs-12 col-sm-2">
             <p style="padding:40px;"></p>
-            <div class="table-responsive">
-                <table class="table">
-                    <button type="button" class="btn btn-warning btn-sm btn-block">Reserve Table</button>
-                </table>
-            </div> 
+            <button type="button" class="btn btn-warning btn-sm btn-block">Reserve Table</button>
         </div>
       </div>
     </div>
@@ -168,9 +164,70 @@
                 <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
             </div>
         </div>
-        form goes here  
       </div>
     </div>
+    
+    <div class="row row-content">
+       <div class="col-xs-12 col-sm-3">
+          <p style="padding:20px;"></p>
+          <h3 align="center">Reserve a Table</h3>
+      </div>
+      <div class="col-xs-12 col-sm-9">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-3">
+                    <label class="control-label">Number of guests</label>
+                </div>
+                <div class="col-sm-9">
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6"> 6
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-3">
+                    <label class="control-label">Date and Time</label>
+                </div>
+                <div class="col-sm-9 has-feedback">
+                    <div class="col-sm-4">
+                        <input type="text" placeholder="Date" style="padding:4px 4px 4px 10px;">
+                        <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <input type="text" placeholder="Time" style="padding:4px 4px 4px 10px;">
+                        <span class="glyphicon glyphicon-time form-control-feedback"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-9"><a class="btn btn-primary btn-sm" href="#">Remove</a></div>
+            </div>
+              
+           <div class="form-group">
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    Warning: Please <strong>call us</strong> to reserve for more than six guests.
+               </div>
+           </div>
+          </form>
+      </div>
+    </div>  
+     
   </div>
 
   <footer class="row-footer">
