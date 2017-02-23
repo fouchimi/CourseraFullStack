@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('confusionApp')
         .service('menuFactory', function() {
     
@@ -186,7 +188,7 @@ angular.module('confusionApp')
     
     this.getPromotion = function(index){
         return promotions[index];
-    }
+    };
 
 })
     .factory('corporateFactory', function() {
@@ -232,11 +234,11 @@ angular.module('confusionApp')
 
             corpfac.getLeaders = function(){
                 return leadership;
-            }
+            };
             
             corpfac.getLeader = function(index){
                 return leadership[index];
-            }
+            };
     
             return corpfac;
     

@@ -41,7 +41,7 @@ angular.module('confusionApp')
     .controller('FeedbackController', ['$scope', function($scope){
         $scope.sendFeedback = function() {
             console.log($scope.feedback);
-            if ($scope.feedback.agree && ($scope.feedback.mychannel == "")&& !$scope.feedback.mychannel) {
+            if ($scope.feedback.agree && ($scope.feedback.mychannel === "")&& !$scope.feedback.mychannel) {
                 $scope.invalidChannelSelection = true;
                 console.log('incorrect');
             }
@@ -75,7 +75,7 @@ angular.module('confusionApp')
                 $scope.userComment.date = new Date().toISOString();
                 // Step 3: Push your comment into the dish's comment array
                 $scope.dish.comments.push($scope.userComment);
-                if ($scope.userComment.author == "" || $scope.userComment.comment == "") {
+                if ($scope.userComment.author === "" || $scope.userComment.comment === "") {
                     console.log('incorrect');
                 }
                 else {
@@ -83,12 +83,12 @@ angular.module('confusionApp')
                     $scope.commentForm.$setPristine();
                     console.log($scope.userComment);
                 }
-            }
+            };
             
             $scope.filter = function(){
                 $scope.propertyName = $scope.key;
                 console.log($scope.key);
-        }
+        };
     }])
     
     .controller('IndexController', ['$scope', '$stateParams','menuFactory','corporateFactory', function($scope, $stateParams, menuFactory, corporateFactory){
