@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="confusionApp">
-
-<head>
-     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head
-         content must come *after* these tags -->
-    <title>Ristorante Con Fusion: Menu</title>
-        <!-- Bootstrap -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="styles/bootstrap-social.css" rel="stylesheet">
-    <link href="styles/mystyles.css" rel="stylesheet">
-
-</head>
-
-<body>
-
     <div class="container">
         <div class="row row-content" ng-controller="DishDetailController">
             <div class="col-xs-12">
+                <button class="btn btn-xs btn-primary pull-right" type="button" ui-sref="app.menu">Back to Menu</button>
                 <div class="media">
                    <div class="media-left">
                       <a href="#"><img class="media-object img-thumbnail" ng-src={{dish.image}} alt="{{dish.name}}"></a>
@@ -101,10 +81,3 @@
 
     </div>
 
-
-   <script src="../bower_components/angular/angular.min.js"></script>
-   <script src="scripts/app.js"></script>
-
-</body>
-
-</html>
