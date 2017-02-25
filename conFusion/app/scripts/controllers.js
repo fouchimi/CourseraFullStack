@@ -106,8 +106,8 @@ angular.module('confusionApp')
         };
     }])
     
-    .controller('IndexController', ['$scope', '$stateParams','menuFactory','corporateFactory', 
-                                    function($scope, $stateParams, menuFactory, corporateFactory){
+    .controller('IndexController', ['$scope', '$stateParams','menuFactory','corporateFactory',
+                                    function($scope, $stateParams, menuFactory, corporateFactory){                             
         $scope.showDish = true;
         $scope.message="Loading ...";
         
