@@ -38,6 +38,18 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "4",
+          "comment": "Love it !",
+          "author": "Awesome",
+          "date": "2017-02-26T01:09:38.792Z"
+        },
+        {
+          "rating": "4",
+          "comment": "Great food",
+          "author": "Ousmane",
+          "date": "2017-02-26T01:23:31.262Z"
         }
       ]
     },
@@ -81,10 +93,10 @@
           "date": "2011-12-02T17:57:28.556094Z"
         },
         {
-          "author": "Ousmane",
-          "rating": 4,
-          "comment": "Not bad at all",
-          "date": "2017-02-23T17:53:00.982Z"
+          "rating": "4",
+          "comment": "I loved it",
+          "author": "Awa",
+          "date": "2017-02-26T01:23:59.912Z"
         }
       ]
     },
@@ -126,6 +138,18 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "4",
+          "comment": "great food",
+          "author": "Ousmane",
+          "date": "2017-02-26T01:01:07.714Z"
+        },
+        {
+          "rating": "3",
+          "comment": "Don't like your cool lait",
+          "author": "Urr",
+          "date": "2017-02-26T01:26:58.470Z"
         }
       ]
     },
@@ -167,6 +191,12 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": "4",
+          "comment": "I love your coffee",
+          "author": "Fouchimi",
+          "date": "2017-02-26T01:08:51.873Z"
         }
       ]
     }
