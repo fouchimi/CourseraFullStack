@@ -4,36 +4,53 @@ var bodyParser = require('body-parser');
 var promoRouter = express.Router();
 promoRouter.use(bodyParser.json());
 
+var Promotions = require('../models/promotions');
+var Verify = require('./verify');
+var ObjectId = require('mongodb').ObjectId;
+
 promoRouter.route('/')
-.all(function(req, res, next){
-   res.writeHead(200, {'Content-Type': 'text/plain'});
-   next();
-})
 .get(function(req, res, next){
-   res.end('Will send all promotions to you!');
+   Promotions.find({}, function(err, promotions){
+     if(err) throw err;
+     res.json(promotions);   
+   });
 })
-.post(function(req, res, next){
-   res.end('Will add the promotions: ' + req.body.name + ' with details: '
-   + req.body.description);
+.post(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(req, res, next){
+    Promotions.create(req.body, function(err, promotion){
+       if(err) throw err;
+       console.log('Promotion created!');
+       var id = promotion._id;
+       res.writeHead(200, {'Content-Type':'text/plain'});
+       res.end('Added new promotion with id: ' + id);
+  }); 
 })
-.delete(function(req, res, next){
-   res.end('Deleting all promotions');
+.delete(Verify.verifyOrdinaryUser, Verify.verifyAdmin,  function(req, res, next){
+   Promotions.remove({}, function(err, resp){
+        if(err) throw err;
+        res.json(resp);
+        res.end('Deleting all promotions');
+   });
 });
 
 promoRouter.route('/:id')
-.all(function(req, res, next){
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  next();
-})
 .get(function(req, res, next){
-  res.end('Will send details of the promotion: ' + req.params.id + ' to you!')
+  Promotions.findById(req.params.id, function(err, promotion){
+    if(err) throw err;
+    res.json(promotion);
+  });
 })
-.put(function(req, res, next){
-  res.write('Updating the promotion: ' + req.params.id + '\n');
-  res.end('Will update the promotion: ' + req.body.name + ' with details ' + req.body.description);
+.put(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(req, res, next){
+  Promotions.findByIdAndUpdate(req.params.id, {$set : req.body
+  }, {new : true}, function(err, promotion){
+    if(err) throw err;
+    res.json(promotion);
+  });
 })
-.delete(function(req, res, next){
-  res.end('Deleting promotion: ' + req.params.id);
+.delete(Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(req, res, next){
+  Promotions.remove({_id: new ObjectId(req.params.id)}, function(err, resp){
+    if(err) throw err;
+    res.json(resp);
+  });
 });
 
 module.exports = promoRouter;
